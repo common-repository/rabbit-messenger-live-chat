@@ -1,0 +1,44 @@
+.image-preview-wrapper {
+    position: relative;
+    margin-bottom: 1rem;
+    width: 100px;
+    height: 100px;
+}
+
+.image-preview-wrapper img {
+    display: none;
+    max-height: 100px;
+    max-width: 100px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-preview-wrapper #clear_image {
+    position: absolute;
+    inset: 0;
+    display: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000070;
+}
+
+.image-preview-wrapper:hover #clear_image {
+    display: none;
+}
+
+.image-preview-wrapper._show img {
+    display: block;
+}
+
+.image-preview-wrapper._show:hover #clear_image {
+    display: flex;
+}
+
+.image-preview-wrapper #clear_image span {
+    font-size: 3rem;
+    width: unset;
+    height: unset;
+    color: #ff6f6f;
+}

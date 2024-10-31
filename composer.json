@@ -1,0 +1,29 @@
+{
+    "name": "rabbit/rabbit-messenger-livechat",
+    "type": "wordpress-plugin",
+    "version": "0.1.3",
+    "require": {
+        "php": ">=8.0 <8.4",
+        "rabbit-software/live-chat-plugin-core": "^1.0",
+        "guzzlehttp/guzzle": "^7.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rabbit\\RabbitMessengerLiveChat\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "yoast/phpunit-polyfills": "^2.0",
+        "mockery/mockery": "^1.6"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "test": "phpunit --colors=always",
+        "ci-phpunit": "@test --log-junit ./.coverage/phpunit-junit-report.xml --coverage-cobertura=./.coverage/phpunit-cobertura-report.xml"
+    }
+}
